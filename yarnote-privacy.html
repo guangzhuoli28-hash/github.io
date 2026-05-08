@@ -1,46 +1,92 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yarnote 隐私政策</title>
+  <title>Yarnote – Privacy Policy</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-      background: #FFFDE7;
-      color: #3E2723;
-      padding: 40px 20px;
-      max-width: 720px;
-      margin: 0 auto;
-      line-height: 1.75;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;
+      background:#FFFDE7;color:#3E2723;
+      padding:36px 20px;max-width:740px;margin:0 auto;line-height:1.8;
     }
-    h1 { font-size: 28px; margin-bottom: 6px; color: #F9A825; }
-    .subtitle { font-size: 14px; color: #8D6E63; margin-bottom: 36px; }
-    h2 { font-size: 17px; font-weight: 600; margin: 28px 0 10px; color: #5D4037; }
-    p  { font-size: 15px; margin-bottom: 12px; }
-    ul { padding-left: 20px; margin-bottom: 12px; }
-    li { font-size: 15px; margin-bottom: 6px; }
-    .highlight {
-      background: #FFF8E1;
-      border-left: 4px solid #FFC107;
-      padding: 14px 18px;
-      border-radius: 0 8px 8px 0;
-      margin: 20px 0;
+    body[dir="rtl"]{text-align:right}
+    h1{font-size:26px;margin-bottom:4px;color:#F9A825}
+    .subtitle{font-size:13px;color:#8D6E63;margin-bottom:28px}
+    h2{font-size:16px;font-weight:600;margin:26px 0 8px;color:#5D4037}
+    p{font-size:15px;margin-bottom:10px}
+    ul{padding-left:20px;margin-bottom:10px}
+    body[dir="rtl"] ul{padding-left:0;padding-right:20px}
+    li{font-size:15px;margin-bottom:5px}
+    .highlight{
+      background:#FFF8E1;border-left:4px solid #FFC107;
+      padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0;
     }
-    footer { font-size: 13px; color: #A1887F; margin-top: 48px; }
+    body[dir="rtl"] .highlight{border-left:none;border-right:4px solid #FFC107;border-radius:8px 0 0 8px}
+    footer{font-size:12px;color:#A1887F;margin-top:44px;padding-top:16px;border-top:1px solid #FFE082}
+
+    /* Language switcher */
+    .switcher{
+      display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px;
+    }
+    body[dir="rtl"] .switcher{justify-content:flex-end}
+    .switcher button{
+      padding:5px 13px;border:1.5px solid #FFC107;border-radius:20px;
+      background:#fff;color:#5D4037;font-size:13px;cursor:pointer;
+      font-family:inherit;transition:all .15s;
+    }
+    .switcher button:hover{background:#FFF8E1}
+    .switcher button.active{background:#FFC107;color:#3E2723;font-weight:600;border-color:#FFA000}
+
+    .lang-content{display:none}
+    .lang-content.visible{display:block}
   </style>
 </head>
 <body>
 
+<div class="switcher">
+  <button onclick="setLang('en')" id="btn-en">English</button>
+  <button onclick="setLang('zh')" id="btn-zh">中文</button>
+  <button onclick="setLang('es')" id="btn-es">Español</button>
+  <button onclick="setLang('fr')" id="btn-fr">Français</button>
+  <button onclick="setLang('ru')" id="btn-ru">Русский</button>
+  <button onclick="setLang('ar')" id="btn-ar">العربية</button>
+</div>
+
+<!-- ══ ENGLISH ══ -->
+<div id="lang-en" class="lang-content">
+  <h1>Yarnote Privacy Policy</h1>
+  <p class="subtitle">Last updated: May 2026</p>
+  <div class="highlight"><strong>Our commitment:</strong> Yarnote does not collect, store, or transmit any user data. All your data is saved only on your device.</div>
+  <h2>1. Data Collection</h2>
+  <p>Yarnote does <strong>not collect</strong> any personal information, including:</p>
+  <ul>
+    <li>Name, email, phone number or other identifiers</li>
+    <li>Location data</li>
+    <li>Device identifiers</li>
+    <li>Usage analytics or behavioral data</li>
+  </ul>
+  <h2>2. Data Storage</h2>
+  <p>All content you create in Yarnote (projects, yarn, notes, photos, etc.) is stored <strong>locally on your iPhone or iPad only</strong>. Nothing is uploaded to any server or cloud service.</p>
+  <h2>3. Third-Party Services</h2>
+  <p>Yarnote does not include any third-party analytics, advertising, or tracking SDKs. The app does not require an internet connection.</p>
+  <h2>4. Data Export &amp; Backup</h2>
+  <p>The app provides a manual export feature that saves your data as a JSON file to a location you choose. This process is entirely under your control; Yarnote is not involved in transmitting or storing your data.</p>
+  <h2>5. Children's Privacy</h2>
+  <p>Yarnote is not directed at children under 13 and does not knowingly collect information from children.</p>
+  <h2>6. Changes to This Policy</h2>
+  <p>If this policy changes, users will be notified through an app update and the date above will be updated.</p>
+  <h2>7. Contact</h2>
+  <p>For any privacy-related questions, please contact us via the developer page on the App Store.</p>
+  <footer>© 2026 Yarnote. This privacy policy applies to the iOS version of Yarnote.</footer>
+</div>
+
+<!-- ══ CHINESE ══ -->
+<div id="lang-zh" class="lang-content">
   <h1>Yarnote 隐私政策</h1>
   <p class="subtitle">最后更新：2026 年 5 月</p>
-
-  <div class="highlight">
-    <strong>核心承诺：</strong>Yarnote 不收集、不存储、不传输任何用户数据。
-    您的所有数据仅保存在您的设备本地。
-  </div>
-
+  <div class="highlight"><strong>核心承诺：</strong>Yarnote 不收集、不存储、不传输任何用户数据。您的所有数据仅保存在您的设备本地。</div>
   <h2>1. 数据收集</h2>
   <p>Yarnote <strong>不收集</strong>任何个人信息，包括但不限于：</p>
   <ul>
@@ -49,31 +95,157 @@
     <li>设备标识符</li>
     <li>使用行为数据或分析数据</li>
   </ul>
-
   <h2>2. 数据存储</h2>
-  <p>您在 Yarnote 中创建的所有内容（项目、线材、笔记、图片等）
-  <strong>仅保存在您的 iPhone / iPad 本地</strong>，不会上传至任何服务器或云端。</p>
-
+  <p>您在 Yarnote 中创建的所有内容（项目、线材、笔记、图片等）<strong>仅保存在您的 iPhone / iPad 本地</strong>，不会上传至任何服务器或云端。</p>
   <h2>3. 第三方服务</h2>
-  <p>Yarnote 不集成任何第三方分析、广告或追踪 SDK。
-  应用运行不需要网络连接。</p>
-
+  <p>Yarnote 不集成任何第三方分析、广告或追踪 SDK。应用运行不需要网络连接。</p>
   <h2>4. 数据导出与备份</h2>
-  <p>应用提供手动导出功能，将数据以 JSON 文件形式保存到您选择的位置。
-  此过程完全由您控制，Yarnote 不参与数据的传输或存储。</p>
-
+  <p>应用提供手动导出功能，将数据以 JSON 文件形式保存到您选择的位置。此过程完全由您控制，Yarnote 不参与数据的传输或存储。</p>
   <h2>5. 儿童隐私</h2>
   <p>Yarnote 不面向 13 岁以下儿童，也不收集任何儿童信息。</p>
-
   <h2>6. 政策变更</h2>
   <p>如本政策有变更，我们将通过应用更新通知用户，并在本页面更新日期。</p>
-
   <h2>7. 联系方式</h2>
   <p>如有任何隐私相关问题，请通过 App Store 开发者页面联系我们。</p>
+  <footer>© 2026 Yarnote. 本隐私政策适用于 iOS 版 Yarnote 应用。</footer>
+</div>
 
-  <footer>
-    <p>© 2026 Yarnote. 本隐私政策适用于 iOS 版 Yarnote 应用。</p>
-  </footer>
+<!-- ══ SPANISH ══ -->
+<div id="lang-es" class="lang-content">
+  <h1>Política de Privacidad de Yarnote</h1>
+  <p class="subtitle">Última actualización: mayo de 2026</p>
+  <div class="highlight"><strong>Nuestro compromiso:</strong> Yarnote no recopila, almacena ni transmite ningún dato de usuario. Todos sus datos se guardan únicamente en su dispositivo.</div>
+  <h2>1. Recopilación de datos</h2>
+  <p>Yarnote <strong>no recopila</strong> ninguna información personal, incluyendo:</p>
+  <ul>
+    <li>Nombre, correo electrónico, número de teléfono u otros identificadores</li>
+    <li>Datos de ubicación</li>
+    <li>Identificadores de dispositivo</li>
+    <li>Análisis de uso o datos de comportamiento</li>
+  </ul>
+  <h2>2. Almacenamiento de datos</h2>
+  <p>Todo el contenido que cree en Yarnote (proyectos, hilos, notas, fotos, etc.) se almacena <strong>únicamente en su iPhone o iPad</strong>. Nada se sube a ningún servidor ni servicio en la nube.</p>
+  <h2>3. Servicios de terceros</h2>
+  <p>Yarnote no incluye SDK de análisis, publicidad ni seguimiento de terceros. La app no requiere conexión a internet.</p>
+  <h2>4. Exportación y copia de seguridad</h2>
+  <p>La app ofrece una función de exportación manual que guarda sus datos como archivo JSON en la ubicación que usted elija. Este proceso está completamente bajo su control.</p>
+  <h2>5. Privacidad infantil</h2>
+  <p>Yarnote no está dirigida a menores de 13 años y no recopila información de niños.</p>
+  <h2>6. Cambios en esta política</h2>
+  <p>Si esta política cambia, los usuarios serán notificados mediante una actualización de la app y se actualizará la fecha anterior.</p>
+  <h2>7. Contacto</h2>
+  <p>Para cualquier pregunta relacionada con la privacidad, contáctenos a través de la página del desarrollador en App Store.</p>
+  <footer>© 2026 Yarnote. Esta política de privacidad se aplica a la versión iOS de Yarnote.</footer>
+</div>
 
+<!-- ══ FRENCH ══ -->
+<div id="lang-fr" class="lang-content">
+  <h1>Politique de confidentialité de Yarnote</h1>
+  <p class="subtitle">Dernière mise à jour : mai 2026</p>
+  <div class="highlight"><strong>Notre engagement :</strong> Yarnote ne collecte, ne stocke et ne transmet aucune donnée utilisateur. Toutes vos données sont uniquement sauvegardées localement sur votre appareil.</div>
+  <h2>1. Collecte de données</h2>
+  <p>Yarnote <strong>ne collecte</strong> aucune information personnelle, notamment :</p>
+  <ul>
+    <li>Nom, e-mail, numéro de téléphone ou autres identifiants</li>
+    <li>Données de localisation</li>
+    <li>Identifiants d'appareil</li>
+    <li>Données d'analyse ou de comportement</li>
+  </ul>
+  <h2>2. Stockage des données</h2>
+  <p>Tout le contenu créé dans Yarnote (projets, fils, notes, photos, etc.) est stocké <strong>uniquement en local sur votre iPhone ou iPad</strong>. Rien n'est envoyé à un serveur ou un service cloud.</p>
+  <h2>3. Services tiers</h2>
+  <p>Yarnote n'intègre aucun SDK d'analyse, de publicité ou de suivi tiers. L'application ne nécessite pas de connexion Internet.</p>
+  <h2>4. Export et sauvegarde</h2>
+  <p>L'application propose une fonction d'exportation manuelle qui sauvegarde vos données au format JSON à l'emplacement de votre choix. Ce processus est entièrement sous votre contrôle.</p>
+  <h2>5. Confidentialité des enfants</h2>
+  <p>Yarnote ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas leurs informations.</p>
+  <h2>6. Modifications de cette politique</h2>
+  <p>Toute modification sera notifiée via une mise à jour de l'app et la date ci-dessus sera actualisée.</p>
+  <h2>7. Contact</h2>
+  <p>Pour toute question relative à la confidentialité, contactez-nous via la page développeur sur l'App Store.</p>
+  <footer>© 2026 Yarnote. Cette politique s'applique à la version iOS de Yarnote.</footer>
+</div>
+
+<!-- ══ RUSSIAN ══ -->
+<div id="lang-ru" class="lang-content">
+  <h1>Политика конфиденциальности Yarnote</h1>
+  <p class="subtitle">Последнее обновление: май 2026 г.</p>
+  <div class="highlight"><strong>Наше обязательство:</strong> Yarnote не собирает, не хранит и не передаёт никакие данные пользователей. Все ваши данные хранятся только локально на вашем устройстве.</div>
+  <h2>1. Сбор данных</h2>
+  <p>Yarnote <strong>не собирает</strong> никакой личной информации, в том числе:</p>
+  <ul>
+    <li>Имя, адрес электронной почты, номер телефона или другие идентификаторы</li>
+    <li>Данные о местоположении</li>
+    <li>Идентификаторы устройства</li>
+    <li>Аналитику использования или поведенческие данные</li>
+  </ul>
+  <h2>2. Хранение данных</h2>
+  <p>Весь контент, созданный в Yarnote (проекты, пряжа, заметки, фото и т.д.), хранится <strong>только локально на вашем iPhone или iPad</strong>. Ничего не загружается на серверы или в облако.</p>
+  <h2>3. Сторонние сервисы</h2>
+  <p>Yarnote не использует сторонние SDK для аналитики, рекламы или отслеживания. Приложение не требует подключения к интернету.</p>
+  <h2>4. Экспорт и резервное копирование</h2>
+  <p>Приложение предоставляет функцию ручного экспорта данных в формате JSON в выбранное вами место. Этот процесс полностью под вашим контролем.</p>
+  <h2>5. Конфиденциальность детей</h2>
+  <p>Yarnote не предназначена для детей до 13 лет и не собирает их данные.</p>
+  <h2>6. Изменения политики</h2>
+  <p>При изменении политики пользователи будут уведомлены через обновление приложения, а дата выше будет обновлена.</p>
+  <h2>7. Контакты</h2>
+  <p>По вопросам конфиденциальности обращайтесь через страницу разработчика в App Store.</p>
+  <footer>© 2026 Yarnote. Настоящая политика конфиденциальности распространяется на iOS-версию Yarnote.</footer>
+</div>
+
+<!-- ══ ARABIC ══ -->
+<div id="lang-ar" class="lang-content">
+  <h1>سياسة خصوصية Yarnote</h1>
+  <p class="subtitle">آخر تحديث: مايو 2026</p>
+  <div class="highlight"><strong>التزامنا:</strong> لا تجمع Yarnote أي بيانات مستخدمين ولا تخزّنها ولا تنقلها. تُحفظ جميع بياناتك محليًا على جهازك فقط.</div>
+  <h2>1. جمع البيانات</h2>
+  <p>لا تجمع Yarnote <strong>أي معلومات شخصية</strong>، بما في ذلك:</p>
+  <ul>
+    <li>الاسم أو البريد الإلكتروني أو رقم الهاتف أو أي معرّفات أخرى</li>
+    <li>بيانات الموقع الجغرافي</li>
+    <li>معرّفات الجهاز</li>
+    <li>بيانات التحليلات أو السلوك</li>
+  </ul>
+  <h2>2. تخزين البيانات</h2>
+  <p>يُحفظ كل المحتوى الذي تنشئه في Yarnote (المشاريع، الخيوط، الملاحظات، الصور، إلخ) <strong>محليًا فقط على جهاز iPhone أو iPad الخاص بك</strong>. لا يُرفع شيء إلى أي خادم أو خدمة سحابية.</p>
+  <h2>3. خدمات الطرف الثالث</h2>
+  <p>لا تدمج Yarnote أي SDK للتحليلات أو الإعلانات أو التتبع. لا يتطلب التطبيق اتصالاً بالإنترنت.</p>
+  <h2>4. تصدير البيانات والنسخ الاحتياطي</h2>
+  <p>يوفر التطبيق ميزة تصدير يدوي تحفظ بياناتك كملف JSON في الموقع الذي تختاره. هذه العملية تحت سيطرتك الكاملة.</p>
+  <h2>5. خصوصية الأطفال</h2>
+  <p>Yarnote غير موجّهة للأطفال دون سن 13 عامًا، ولا تجمع معلوماتهم.</p>
+  <h2>6. تغييرات السياسة</h2>
+  <p>في حال تغيير هذه السياسة، سيُبلَّغ المستخدمون عبر تحديث التطبيق وسيُحدَّث التاريخ أعلاه.</p>
+  <h2>7. التواصل</h2>
+  <p>لأي استفسارات تتعلق بالخصوصية، يرجى التواصل معنا عبر صفحة المطوّر على App Store.</p>
+  <footer>© 2026 Yarnote. تسري سياسة الخصوصية هذه على نسخة iOS من Yarnote.</footer>
+</div>
+
+<script>
+  var LANGS = ['en','zh','es','fr','ru','ar'];
+  var RTL   = ['ar'];
+
+  function setLang(code) {
+    LANGS.forEach(function(l) {
+      document.getElementById('lang-' + l).classList.remove('visible');
+      document.getElementById('btn-'  + l).classList.remove('active');
+    });
+    document.getElementById('lang-' + code).classList.add('visible');
+    document.getElementById('btn-'  + code).classList.add('active');
+    document.body.setAttribute('dir', RTL.includes(code) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', code);
+  }
+
+  // Auto-detect on load
+  (function() {
+    var sys  = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    var code = sys.split('-')[0];
+    // Map zh-tw / zh-hk etc. → zh
+    if (code === 'zh') code = 'zh';
+    if (!LANGS.includes(code)) code = 'en';
+    setLang(code);
+  })();
+</script>
 </body>
 </html>
